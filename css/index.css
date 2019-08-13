@@ -1,3 +1,253 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    max-width:100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol, ul {
+	list-style-type: square;
+  list-style-position: inside;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+nav {
+	margin: auto;
+	width: 876px;
+}
+
+nav a {
+	text-decoration: none;
+	color: grey;
+	padding: 25px;
+}
+h1 {
+	display:flex;
+	align-content: flex-end;
+	padding-top:20px;
+	margin-left:80px;
+	font-size:80px;
+}
+.button-class{
+	display:flex;
+	font-size:15px;
+	background-color: white;
+	border:1px solid black;
+	color:black;
+	margin:0 auto;
+	margin-bottom:50px;
+	width:120px;
+	text-align:center;
+}
+button:hover{
+	background: pink;
+	color:white;
+}
+nav a:hover{
+	background:pink;
+	color:black;
+}
+
+header {
+	display:flex;
+
+}
+
+header .title {
+	font-size: 68px;
+	text-align: center;
+	display: inline-block;
+	margin: 0px 15px;
+	margin-right: 100px;
+}
+
+.text{
+	display:flex;
+	justify-content: center;
+}
+
+.company-logo{
+	display:flex;
+	justify-content:space-between;
+}
+
+.top-content {
+	width: 876px;
+}
+
+.top-main{
+	display:flex;
+	font-size:13px;
+}
+
+.middle-img {
+	margin: 30px 0px;
+}
+
+.bottom-content{
+	display:flex;
+}
+
+.bottom-main {
+	display:flex;
+    font-size:13px;
+    padding-right:5px;
+}
+
+
+.contact {
+	margin-top: 30px;
+}
+
+body { 
+	width: 876px;
+	margin: 0 auto;
+}
+
+footer {
+	margin-top: 50px;
+	text-align: center;
+}
+
+
+/*This is for Tablet*/
+
+@media screen and (max-width: 800px) {
+    /* This is for the Index Page */
+   .nav a{
+       display:flex;
+       flex-direction: row;
+   }
+   header{
+       display:flex;
+       flex-direction: column-reverse;
+       align-items: center;
+   }
+   .logo-pic{
+       align-items: center;
+   }
+    .middle-img {
+      width: 800px;
+      padding: 2.5%;
+    }
+    
+    header {
+      justify-content: center;
+    }
+    .circle-pic {
+      display: none;
+    }
+  
+    /* This is for the Contact Page */
+    .contact {
+      margin-top: 15%;
+    }
+    /*  */
+    @media screen and (max-width: 500px) {
+        /* This is for the Home Page */
+        nav a{
+          max-width: 100%;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          position: relative;
+          padding: 0px;
+        }
+        nav .logo-pic {
+          margin: 5% 0% 5% 2.5%;
+          order: -1;
+        }
+        nav a {
+          border-bottom: 1px solid dimgrey;
+          width: 100%;
+          padding: 4.85%;
+        }
+        nav a:hover {
+          color: none;
+          transform: none;
+          text-shadow: none;
+        }
+        nav a:first-child {
+          border-top: 1px solid dimgrey;
+        }
+        .circle-pic {
+          display: none;
+        }
+        .text {
+          width: 100%;
+          justify-content: center;
+        }
+        .middle-img {
+          width: 95%;
+          margin-left: 2.5%;
+          margin-bottom: 5%;
+        }
+        .top-main {
+          flex-direction: column;
+        }
+        .top-main p {
+          width: 95%;
+          margin-bottom: 10%;
+        }
+        .bottom-main {
+          flex-direction: column;
+        }
+        .bottom-main p {
+          width: 95%;
+          margin: 5% 0;
+        }
+        .contact {
+          padding-top: 10%;
+        }
